@@ -5,6 +5,10 @@
 {% endblock %}
 
 {% block body %}
+<form action="{% url 'edit' title%}" method="GET">
+    {% csrf_token %}
+    <input type="submit" value="Edit Content">
+</form>
     <md-block>
         {{entries}}
     </md-block>
