@@ -1,0 +1,18 @@
+{%extends "encyclopedia/layout.html"%}
+
+{%block title%}
+Create new entry
+{%endblock%}
+
+{%block body%}
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for i in form %}
+        {{i}}
+        <br>
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+
+{%endblock%}
